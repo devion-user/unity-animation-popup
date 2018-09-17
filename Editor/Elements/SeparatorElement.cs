@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Devi.Graph
+namespace Devi.Framework.Editor.Popup
 {
     public class SeparatorElement : BasePopupElement
     {

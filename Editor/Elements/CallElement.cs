@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Devi.Graph
+namespace Devi.Framework.Editor.Popup
 {
     public class CallElement : BaseCallElement
     {

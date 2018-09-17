@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Devi.Graph
+namespace Devi.Framework.Editor.Popup
 {
     public class HandleGroupElement : BaseGroupElement
     {

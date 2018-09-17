@@ -1,4 +1,4 @@
-namespace Devi.Graph
+namespace Devi.Framework.Editor.Popup
 {
     public interface IPopupConfig
     {

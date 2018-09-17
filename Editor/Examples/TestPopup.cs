@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
-namespace Devi.Graph
+namespace Devi.Framework.Editor.Popup
 {
     public static class TestPopup
     {

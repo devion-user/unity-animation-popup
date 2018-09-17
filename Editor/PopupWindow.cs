@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using Devi.Graph.Search;
+using Devi.Framework.Editor.Popup.Search;
 using UnityEditor;
 using UnityEngine;
 
-namespace Devi.Graph
+namespace Devi.Framework.Editor.Popup
 {
     internal class PopupWindow : EditorWindow
     {

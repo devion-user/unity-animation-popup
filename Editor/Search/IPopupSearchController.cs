@@ -1,6 +1,6 @@
 using System;
 
-namespace Devi.Graph.Search
+namespace Devi.Framework.Editor.Popup.Search
 {
     public interface IPopupSearchController
     {
