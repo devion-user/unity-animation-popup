@@ -5,8 +5,8 @@ namespace Devi.Framework.Editor.Popup
 {
     public class GroupElement : BaseGroupElement
     {
-        private readonly List<BasePopupElement> children = new List<BasePopupElement>();
-        public override List<BasePopupElement> Children
+        private readonly List<BaseElement> children = new List<BaseElement>();
+        public override List<BaseElement> Children
         {
             get { return children; }
         }

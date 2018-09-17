@@ -8,8 +8,8 @@ namespace Devi.Framework.Editor.Popup
         public string Separator { get; set; } = "/";
         public float MaxWidth { get; set; } = 150f;
         public float MaxHeight { get; set; } = 600f;
-        public bool HasFixedWidth { get; set; }
-        public bool HasFixedHeight { get;set; }
+        public bool HasFixedWidth { get; set; } = true;
+        public bool HasFixedHeight { get; set; } = true;
         public string RootName { get; set; } = "";
     }
 }

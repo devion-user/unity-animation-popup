@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Devi.Framework.Editor.Popup
 {
-    public class SeparatorElement : BasePopupElement
+    public class SeparatorElement : BaseElement
     {
         private const float c_ElementHeight = 8f;
 

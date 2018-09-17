@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Devi.Framework.Editor.Popup
 {
-    public abstract class BaseSelectableElement : BasePopupElement
+    public abstract class BaseSelectableElement : BaseElement
     {
         private Texture2D icon;
         public Texture2D Icon

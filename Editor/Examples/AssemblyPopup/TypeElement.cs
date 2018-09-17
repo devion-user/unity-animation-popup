@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Devi.Framework.Editor.Popup
+namespace Devi.Framework.Editor.Popup.Examples
 {
-    public class DownloadGroupElement : BaseGroupElement
+    public class TypeElement : BaseGroupElement
     {
         private readonly List<BaseElement> children = new List<BaseElement>();
         public override List<BaseElement> Children
@@ -12,19 +12,14 @@ namespace Devi.Framework.Editor.Popup
             get { return children; }
         }
 
-        public event Action<DownloadGroupElement> OnDownload;
+        public event Action<TypeElement> OnDownload;
         private bool needDownload = true;
 
-        public DownloadGroupElement(string title, Texture2D icon, Action<DownloadGroupElement> action) : base(title, icon)
+        public TypeElement(Type type) : base(type.Name, null)
         {
-            OnDownload = action;
+           
         }
         
-        public DownloadGroupElement(string title, Action<DownloadGroupElement> action) : base(title, null)
-        {
-            OnDownload = action;
-        }
-
         public override void OnClick(Popup popup, Vector2 mousePosition)
         {
             if (needDownload)

@@ -8,7 +8,7 @@ namespace Devi.Framework.Editor.Popup
         private static readonly GUIContent s_Content = new GUIContent();
         private const float c_ElementHeight = 20f;
         
-        public abstract List<BasePopupElement> Children { get; }
+        public abstract List<BaseElement> Children { get; }
 
         public override bool IsVisible
         {

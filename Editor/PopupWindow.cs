@@ -40,7 +40,7 @@ namespace Devi.Framework.Editor.Popup
             get { return mContexts[mContexts.Count - 2 + mFinishLastContextOffset]; }
         }
 
-        private BasePopupElement ActiveElement
+        private BaseElement ActiveElement
         {
             get { return ActiveParent?.Children[ActiveParent.SelectedIndex]; }
         }
@@ -53,9 +53,13 @@ namespace Devi.Framework.Editor.Popup
             window.config = config;
             window.mUnconvertedPosition = pos;
             window.mScreenPosition = gui ? GUIUtility.GUIToScreenPoint(pos) : pos;
+            if (s_Instance && !s_Instance.mNeedUpdate)
+                s_Instance.Close();
+            s_Instance = window;
             return window;
         }
 
+        private static PopupWindow s_Instance;
         public new void Show()
         {
             mCurrentLastContextOffset = 1f;
@@ -64,7 +68,8 @@ namespace Devi.Framework.Editor.Popup
             mPopup.Root.CallBeforeContentNeeded(mPopup);
             mPopup.Search.CallBeforeContentNeeded(mPopup);
 
-            CalcAutoSize();
+            if (!config.HasFixedWidth && !config.HasFixedHeight)
+                CalcAutoSize();
             InitializeContext();
             
             mNeedUpdate = false;
@@ -422,7 +427,7 @@ namespace Devi.Framework.Editor.Popup
             mFinishLastContextOffset = 0;
         }
         
-        private void GoToChild(BasePopupElement e, bool right)
+        private void GoToChild(BaseElement e, bool right)
         {
             var element = e as BaseCallElement;
             if (element != null)
@@ -503,7 +508,7 @@ namespace Devi.Framework.Editor.Popup
             mContexts.Add(groupElement);
         }
         
-        private BasePopupElement GetChild(IList<BasePopupElement> elements, GroupElement parent, string path)
+        private BaseElement GetChild(IList<BaseElement> elements, GroupElement parent, string path)
         {
             for (int i = 0; i < elements.Count; i++)
             {

@@ -5,6 +5,12 @@ namespace Devi.Framework.Editor.Popup.Examples
 {
     public static class TestPopup
     {
+        [MenuItem("Test/Assembly Popup")]
+        public static void ShowAssemblyPopup()
+        {
+            AssemblyPopupManager.Instance.popup.ShowOnScreen(new Vector2(0, 200));
+        }
+        
         [MenuItem("Test/Popup")]
         public static void ShowPopup()
         {
