@@ -1,8 +1,7 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
 
-namespace Devi.Framework.Editor.Popup
+namespace Devi.Framework.Editor.Popup.Examples
 {
     public static class TestPopup
     {
